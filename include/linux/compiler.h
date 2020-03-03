@@ -206,7 +206,8 @@ void ftrace_likely_update(struct ftrace_branch_data *f, int val, int expect);
  * the code is emitted even though it appears to be unreferenced.
  */
 #ifndef __used
-# define __used			/* unimplemented */
+//# define __used			/* unimplemented */
+# define __used		__attribute__((__used__))
 #endif
 
 #ifndef __maybe_unused
